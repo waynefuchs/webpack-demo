@@ -1,5 +1,11 @@
 const path = require('path');
 
+// to load toml, yamljs, and json5
+const toml = require('toml');
+const yaml = require('yamljs');
+const json5 = require('json5');
+
+
 module.exports = {
   // mode: "production",
   mode: "development",
@@ -37,6 +43,29 @@ module.exports = {
       {
         test: /\.(xml)$/i,
         use: ['xml-loader'],
+      },
+
+      /* toml, yamljs, and json5 loading */
+      {
+        test: /\.toml$/i,
+        type: 'json',
+        parser: {
+          parse: toml.parse,
+        },
+      },
+      {
+        test: /\.yaml$/i,
+        type: 'json',
+        parser: {
+          parse: yaml.parse,
+        },
+      },
+      {
+        test: /\.json5$/i,
+        type: 'json',
+        parser: {
+          parse: json5.parse,
+        },
       },
 
     ],

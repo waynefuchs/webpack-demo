@@ -14,6 +14,10 @@ import Icon from './icon.png';
 import Data from './data.xml';
 import Notes from './data.csv';
 import JsonData from './sample.json';
+import toml from './data.toml';
+import yaml from './data.yaml';
+import json from './data.json5';
+
 
 
 // Lodash Example
@@ -45,6 +49,10 @@ function sendDataToConsole() {
   console.log(Data);
   console.table(Notes);
   console.log(JsonData);
+
+  console.log(`${toml.title}: ${toml.owner.name}`);
+  console.log(`${yaml.title}: ${yaml.owner.name}`);
+  console.log(`${json.title}: ${json.owner.name}`);
 }
 
 document.body.appendChild(lodashExampleComponent());
