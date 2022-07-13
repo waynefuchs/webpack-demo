@@ -13,7 +13,7 @@ import Icon from './icon.png';
 // Import Data
 import Data from './data.xml';
 import Notes from './data.csv';
-
+import JsonData from './sample.json';
 
 
 // Lodash Example
@@ -44,6 +44,7 @@ function myModuleExampleComponent() {
 function sendDataToConsole() {
   console.log(Data);
   console.table(Notes);
+  console.log(JsonData);
 }
 
 document.body.appendChild(lodashExampleComponent());
