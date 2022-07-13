@@ -13,6 +13,10 @@ module.exports = {
   // Never use in prod (?)
   devtool: 'inline-source-map',
 
+  devServer: {
+    static: './dist',
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
