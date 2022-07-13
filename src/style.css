@@ -1,4 +1,13 @@
+@font-face {
+    font-family: 'Leckerli-One';
+    src: url('./LeckerliOne-Regular.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .hello {
     color: red;
     background: url('./icon.png');
+    font-family: 'Leckerli-One';
+    font-size: 2rem;
 }
