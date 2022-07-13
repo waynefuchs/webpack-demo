@@ -9,12 +9,18 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
-  /* chain: style-loader and css-loader */
   module: { 
     rules: [
+      /* chain: style-loader and css-loader */
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+
+      /* Asset Modules: Image Processing */
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
       },
     ],
   },
