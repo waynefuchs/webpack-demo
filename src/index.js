@@ -10,6 +10,13 @@ import './style.css';
 // Image Test
 import Icon from './icon.png';
 
+// Import Data
+import Data from './data.xml';
+import Notes from './data.csv';
+
+
+
+// Lodash Example
 function lodashExampleComponent() {
   const element = document.createElement('div');
 
@@ -19,8 +26,8 @@ function lodashExampleComponent() {
   return element;
 }
 
+// An example using my module
 function myModuleExampleComponent() {
-    // Using my function!
     const nameElement = document.createElement('div');
     nameElement.textContent = myName('John Jacob Jingle-Hiemer Schmidt');
     nameElement.classList.add('hello');
@@ -33,5 +40,12 @@ function myModuleExampleComponent() {
     return nameElement;
 }
 
+// Put the loaded data into the console
+function sendDataToConsole() {
+  console.log(Data);
+  console.table(Notes);
+}
+
 document.body.appendChild(lodashExampleComponent());
 document.body.append(myModuleExampleComponent());
+sendDataToConsole();

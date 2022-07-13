@@ -28,6 +28,17 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
+
+      /* Load Data (csv & xml) Json is built-in */
+      {
+        test: /\.(csv|tsv)$/i,
+        use: ['csv-loader'],
+      },
+      {
+        test: /\.(xml)$/i,
+        use: ['xml-loader'],
+      },
+
     ],
   },
 };
